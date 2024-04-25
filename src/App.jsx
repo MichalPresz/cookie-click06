@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 
 export default function App() {
   // what if I want to do local storage? STRETCH GOAL
-  const [cookies, setCookies] = useState(0);
+  const [carrots, setCarrots] = useState(0);
   const [cps, setCps] = useState(1); // CPS = Cookies Per Second
 
   useEffect(() => {
     // maybe you want to do some maths here for the 1000/cps etc
     // a timer to be created when the page loads to increase cookies by cps every second
     const myInterval = setInterval(() => {
-      addCookie();
+      addCarrot();
     }, 1000 / cps);
 
     // to clean up my timer when I rerun the useEffect to i don't end up with a billion timers
@@ -18,11 +18,11 @@ export default function App() {
     };
   }, [cps]);
 
-  function addCookie() {
+  function addCarrot() {
     // because this runs in a timer, we need to be more explicit about the previous value of the state variable
-    setCookies((currentCookies) => {
+    setCarrots((currentCarrots) => {
       // what if I want to do local storage? STRETCH GOAL
-      return currentCookies + 1;
+      return currentCarrots + 1;
     });
   }
 
@@ -32,11 +32,29 @@ export default function App() {
 
   return (
     <div>
-      <h1>Cookie Clicker</h1>
-      <button onClick={addCookie}>I am a cookie</button>
-      <button onClick={buyUpgrade}>Buy upgrade</button>
-      <p>I have {cookies} cookies</p>
-      <p>I get {cps} cookies per second</p>
+      <h1>Raining Carrots</h1>
+      <button onClick={addCarrot}>I am a carrot</button>
+      <button onClick={buyUpgrade}>Carrot Rain</button>
+      <p>I have {carrots} carrots</p>
+      <p>I get {cps} carrots per second</p>
     </div>
   );
 }
+
+<body>
+<div>
+  <p>Carrots: <span id="cookiesSpan">0</span></p>
+</div>
+<div>
+  <p>Carrots Per Second: <span id="cpsSpan">0</span></p>
+</div>
+<div>
+  <button id="cookieBtn"><img src="./Bugs_Bunny.webp" /></button>
+</div>
+<div>
+  <p><button id="upgradeBtn">Raining Carrots Upgrade</button></p>
+</div>
+<div>
+  <p><button id="restartBtn">Restart</button></p>
+</div>
+</body>

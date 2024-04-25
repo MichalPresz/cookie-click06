@@ -1,0 +1,17 @@
+body {
+  background-image: url(./bugsbunnyworld.jpg);
+}
+
+button {
+  border-radius: 50%;
+}
+
+button:hover {
+  color: orange;
+  background-color: red;
+}
+div {
+  display: flex;
+  justify-content: space-evenly;
+  justify-content: center;
+}
