@@ -29,18 +29,26 @@ export default function App() {
   function buyUpgrade() {
     setCps(cps + 1);
   }
+  function resetBtn() {
+    setCarrots(0);
+    cps(1);
+  }
 
   return (
     <div>
-      <h1>Raining Carrots</h1>
-      <button onClick={addCarrot}>
-        <img src="src/assets/Bugs_Bunny.webp" />
+      <h1>Carrot Rain</h1>
+      <button id="bunny" onClick={addCarrot}>
+        <p>I have {carrots} carrots</p>
+        <img className="hoverglow" src="src/assets/Bugs_Bunny.webp" />
       </button>
-      <button onClick={buyUpgrade}>
-        <img src="src/assets/carrotnobg.png" />
+      <button id="carrot" onClick={buyUpgrade}>
+        <p>I get {cps} carrots per second</p>
+        <img className="hoverglow" src="src/assets/carrotnobg.png" />
       </button>
-      <p>I have {carrots} carrots</p>
-      <p>I get {cps} carrots per second</p>
+      <button id="knife" onClick={resetBtn}>
+        <p> Chopp the Carrots</p>
+         <img className="hoverglow" src="src/assets/knife.png"/>
+      </button>
     </div>
   );
 }

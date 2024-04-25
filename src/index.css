@@ -1,17 +1,39 @@
-button {
+#bunny {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(219, 20, 20, 0.5));
+}
+#carrot {
+  background-color: transparent;
+  border: none;
   border-radius: 50%;
 }
-
+#knife {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(219, 20, 20, 0.5));
+}
+.hoverglow:hover {
+  -webkit-filter: drop-shadow(12px 12px 7px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(12px 12px 7px rgba(219, 20, 20, 0.5));
+}
 button:hover {
   color: orange;
   background-color: red;
 }
-div {
-  display: flex;
-  justify-content: space-evenly;
-  justify-content: center;
-}
 
 body {
   background-image: url("src/assets/bugsbunnyworld.jpg");
+  background-repeat: no-repeat;
+}
+div {
+  display: flex;
+  position: center;
+}
+p {
+  font-size: xx-large;
 }
