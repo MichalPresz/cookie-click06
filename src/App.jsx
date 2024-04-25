@@ -34,10 +34,11 @@ export default function App() {
     <div>
       <h1>Raining Carrots</h1>
       <button onClick={addCarrot}>
-        {" "}
-        <img src="src/assets/Bugs_Bunny.webp" alt="bunny" />
+        <img src="src/assets/Bugs_Bunny.webp" />
       </button>
-      <button onClick={buyUpgrade}>Carrot Rain</button>
+      <button onClick={buyUpgrade}>
+        <img src="src/assets/carrotnobg.png" />
+      </button>
       <p>I have {carrots} carrots</p>
       <p>I get {cps} carrots per second</p>
     </div>
