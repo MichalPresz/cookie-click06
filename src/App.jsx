@@ -9,8 +9,7 @@ export default function App() {
     // maybe you want to do some maths here for the 1000/cps etc
     // a timer to be created when the page loads to increase cookies by cps every second
     const myInterval = setInterval(() => {
-      addCarrot();
-    }, 1000 / cps);
+    }, []);
 
     // to clean up my timer when I rerun the useEffect to i don't end up with a billion timers
     return () => {
@@ -30,8 +29,8 @@ export default function App() {
     setCps(cps + 1);
   }
   function resetBtn() {
+    setCps(0);
     setCarrots(0);
-    cps(1);
   }
 
   return (
@@ -47,7 +46,7 @@ export default function App() {
       </button>
       <button id="knife" onClick={resetBtn}>
         <p> Chopp the Carrots</p>
-         <img className="hoverglow" src="src/assets/knife.png"/>
+        <img className="hoverglow" src="src/assets/knife.png" />
       </button>
     </div>
   );
