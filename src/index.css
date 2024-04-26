@@ -27,7 +27,7 @@ button:hover {
 }
 
 body {
-  background-image: url("/bugsbunnyworld.jpg");
+  background-image: url("./bugsbunnyworld.jpg");
   background-repeat: no-repeat;
 }
 div {

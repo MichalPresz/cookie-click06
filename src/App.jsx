@@ -42,15 +42,15 @@ export default function App() {
       <h1>Carrot Rain</h1>
       <button id="bunny" onClick={addCarrot}>
         <p>You have {carrots} carrots</p>
-        <img className="hoverglow" src="=/Bugs_Bunny.webp" />
+        <img className="hoverglow" src="/Bugs_Bunny.webp" />
       </button>
       <button id="carrot" onClick={buyUpgrade}>
         <p>You get {cps} carrots per second</p>
-        <img className="hoverglow" src="=/carrotnobg.png" />
+        <img className="hoverglow" src="/carrotnobg.png" />
       </button>
       <button id="knife" onClick={resetBtn}>
         <p> Chop the Carrots</p>
-        <img className="hoverglow" src="=/knife.png" />
+        <img className="hoverglow" src="/knife.png" />
       </button>
     </div>
   );
