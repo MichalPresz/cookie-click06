@@ -3,25 +3,24 @@ import { useState, useEffect } from "react";
 export default function App() {
   // what if I want to do local storage? STRETCH GOAL
   const [carrots, setCarrots] = useState(0);
-  const [cps, setCps] = useState(1); // CPS = Cookies Per Second
+  const [cps, setCps] = useState(0); // CPS = Cookies Per Second
 
   useEffect(() => {
     // maybe you want to do some maths here for the 1000/cps etc
     // a timer to be created when the page loads to increase cookies by cps every second
-    const myInterval = setInterval(() => {
-      addCarrot();
-    }, 1000);
+    const myInterval = setInterval(() => {}, 1000);
 
     // to clean up my timer when I rerun the useEffect to i don't end up with a billion timers
     return () => {
       clearInterval(myInterval);
     };
-  }, [cps]);
+  });
 
-  function addCarrot() {
+  function addCarrot(addCarrot) {
     // because this runs in a timer, we need to be more explicit about the previous value of the state variable
     setCarrots((currentCarrots) => {
       // what if I want to do local storage? STRETCH GOAL
+      addEventListener.onClick = { addCarrot };
       return currentCarrots + 1;
     });
   }
@@ -43,15 +42,15 @@ export default function App() {
       <h1>Carrot Rain</h1>
       <button id="bunny" onClick={addCarrot}>
         <p>You have {carrots} carrots</p>
-        <img className="hoverglow" src="src/assets/Bugs_Bunny.webp" />
+        <img className="hoverglow" src="public/Bugs_Bunny.webp" />
       </button>
       <button id="carrot" onClick={buyUpgrade}>
         <p>You get {cps} carrots per second</p>
-        <img className="hoverglow" src="src/assets/carrotnobg.png" />
+        <img className="hoverglow" src="public/carrotnobg.png" />
       </button>
       <button id="knife" onClick={resetBtn}>
         <p> Chop the Carrots</p>
-        <img className="hoverglow" src="src/assets/knife.png" />
+        <img className="hoverglow" src="public/knife.png" />
       </button>
     </div>
   );
