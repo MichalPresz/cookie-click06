@@ -29,11 +29,17 @@ button:hover {
 body {
   background-image: url("./bugsbunnyworld.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
 }
 div {
   display: flex;
   position: center;
+  justify-content: space-evenly;
+  align-items: center;
 }
 p {
   font-size: xx-large;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
