@@ -42,3 +42,12 @@ p {
   align-items: center;
   justify-content: space-evenly;
 }
+@media (max-width: 800px) {
+  body, div {
+    flex-direction: column;
+    height: 100%;
+  }
+  p {
+    font-size: 18px;
+  }
+}
