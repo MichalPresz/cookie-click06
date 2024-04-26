@@ -9,14 +9,14 @@ export default function App() {
     // maybe you want to do some maths here for the 1000/cps etc
     // a timer to be created when the page loads to increase cookies by cps every second
     const myInterval = setInterval(() => {
-      ;
+      setCarrots((currentCarrots)=> currentCarrots +cps);
     }, 1000);
 
     // to clean up my timer when I rerun the useEffect to i don't end up with a billion timers
     return () => {
       clearInterval(myInterval);
     };
-  }, []);
+  }, [cps]);
 
   function addCarrot() {
     // because this runs in a timer, we need to be more explicit about the previous value of the state variable
