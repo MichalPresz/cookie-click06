@@ -3,20 +3,20 @@ import { useState, useEffect } from "react";
 export default function App() {
   // what if I want to do local storage? STRETCH GOAL
   const [carrots, setCarrots] = useState(0);
-  const [cps, setCps] = useState(1); // CPS = Cookies Per Second
+  const [cps, setCps] = useState(0); // CPS = Cookies Per Second
 
   useEffect(() => {
     // maybe you want to do some maths here for the 1000/cps etc
     // a timer to be created when the page loads to increase cookies by cps every second
     const myInterval = setInterval(() => {
-      addCarrot();
-    }, 1000/cps);
+      ;
+    }, 1000);
 
     // to clean up my timer when I rerun the useEffect to i don't end up with a billion timers
     return () => {
       clearInterval(myInterval);
     };
-  });
+  }, []);
 
   function addCarrot() {
     // because this runs in a timer, we need to be more explicit about the previous value of the state variable
